@@ -3,6 +3,7 @@ import 'package:login_cadastro/database/user_database.dart';
 import 'package:login_cadastro/model/user_model.dart';
 import 'package:login_cadastro/ui/pages/homepage.dart';
 
+
 class UserController {
   UserDataBase userDataBase = UserDataBase();
 
