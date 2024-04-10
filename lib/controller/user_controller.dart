@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_cadastro/database/user_database.dart';
 import 'package:login_cadastro/model/user_model.dart';
 import 'package:login_cadastro/ui/pages/homepage.dart';
+import 'package:login_cadastro/ui/pages/profile.dart';
 
 
 class UserController {
@@ -19,7 +20,7 @@ class UserController {
     if (result.isNotEmpty) {
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (_) => HomePage()),
+          MaterialPageRoute(builder: (_) => Profile()),
           (route) => false);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(

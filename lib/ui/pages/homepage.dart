@@ -13,9 +13,10 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController titleController = TextEditingController();
   final TextEditingController descController = TextEditingController();
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(texto: 'Tarefas'),
+      appBar:  MyAppBar(texto: 'Tarefas'),
       body: Column(
         children: [
           const Padding(
@@ -60,6 +61,12 @@ class _HomePageState extends State<HomePage> {
                   return ListTile(
                     title: Text(task.title),
                     subtitle: Text(task.desc),
+                    leading: IconButton(
+                      icon: const Icon(Icons.check, color: Colors.greenAccent),
+                      onPressed: () {
+                        taskDataBase.removeTask(index);
+                      },
+                    ),
                     trailing: IconButton(
                       icon: const Icon(Icons.delete, color: Colors.redAccent),
                       onPressed: () {

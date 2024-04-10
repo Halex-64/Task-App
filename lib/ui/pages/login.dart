@@ -3,12 +3,20 @@ import 'package:login_cadastro/controller/user_controller.dart';
 import 'package:login_cadastro/ui/widgets/myAppBar.dart';
 import 'package:login_cadastro/ui/widgets/text.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   //criamos o objeto controller
   UserController userController = UserController();
+
   //variaveis do formulario
   final nomeController = TextEditingController();
+
   final passwordController = TextEditingController();
 
   @override

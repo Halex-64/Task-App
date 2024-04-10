@@ -8,7 +8,6 @@ class ClicavelTextHome extends StatelessWidget {
   const ClicavelTextHome({
     super.key,
     required this.text,
-
   });
 
   @override
@@ -32,7 +31,6 @@ class ClicavelText extends StatelessWidget {
   const ClicavelText({
     super.key,
     required this.text,
-
   });
 
   @override
@@ -44,6 +42,30 @@ class ClicavelText extends StatelessWidget {
         text,
         style: const TextStyle(
           color: Colors.blueAccent,
+        ),
+      ),
+    );
+  }
+}
+
+class ClicavelTextLogout extends StatelessWidget {
+  final String text;
+
+  const ClicavelTextLogout({
+    super.key,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Login())),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Colors.redAccent,
+          fontSize: 18,
         ),
       ),
     );
